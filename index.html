@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Emerging Technologies - Chapter 10 College Educational Report. Learn AI, Machine Learning, Robotics, IoT, Blockchain, VR/AR, and more with simple explanations and real-life scenarios.">
+  <title>Emerging Technologies | Chapter 10 IT Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- AMBIENT SCANLINE OVERLAY -->
+  <div class="ambient-grid"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header id="top-header">
+    <nav id="navbar" class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-pulse"><i class="fas fa-atom"></i></span>
+        <div class="brand-text-group">
+          <span class="brand-title">EMERGING<span class="brand-highlight">TECH</span></span>
+          <span class="brand-badge">CH.10 IT REPORT</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#overview" class="nav-link"><i class="fas fa-compass"></i> Overview</a></li>
+        <li><a href="#topics" class="nav-link"><i class="fas fa-layer-group"></i> 15 Topics</a></li>
+        <li><a href="#matrix" class="nav-link"><i class="fas fa-cubes"></i> Industry Matrix</a></li>
+        <li><a href="#decision-framework" class="nav-link"><i class="fas fa-code-branch"></i> Decision Guide</a></li>
+        <li><a href="#quiz-section" class="nav-link"><i class="fas fa-graduation-cap"></i> Quiz</a></li>
+        <li><a href="#references" class="nav-link"><i class="fas fa-bookmark"></i> Sources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="topic-search" placeholder="Search 15 technologies..." autocomplete="off">
+          <button id="search-clear" class="search-clear-btn" title="Clear search" style="display: none;">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <button id="sound-toggle" class="control-btn" title="Toggle Sound FX (Futuristic Audio)" aria-label="Toggle sound">
+          <i class="fas fa-volume-up" id="sound-icon"></i>
+        </button>
+
+        <button id="theme-toggle" class="control-btn" title="Switch Theme (Dark/Light)" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+
+        <button id="mobile-toggle" class="control-btn mobile-menu-btn" title="Open Menu" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE SLIDE-OUT MENU -->
+  <div id="mobile-menu" class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <span class="brand-title">EMERGING<span class="brand-highlight">TECH</span></span>
+      <button id="mobile-close" class="control-btn"><i class="fas fa-times"></i></button>
+    </div>
+    <ul class="mobile-links">
+      <li><a href="#hero" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#overview" class="mobile-nav-link"><i class="fas fa-compass"></i> Overview & IT Trends</a></li>
+      <li><a href="#topics" class="mobile-nav-link"><i class="fas fa-layer-group"></i> All 15 Topics</a></li>
+      <li><a href="#matrix" class="mobile-nav-link"><i class="fas fa-cubes"></i> Industry Matrix</a></li>
+      <li><a href="#decision-framework" class="mobile-nav-link"><i class="fas fa-code-branch"></i> Decision Guide (Schools & IT)</a></li>
+      <li><a href="#quiz-section" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Interactive Knowledge Quiz</a></li>
+      <li><a href="#references" class="mobile-nav-link"><i class="fas fa-bookmark"></i> References & Sources</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-particles"></canvas>
+      <div class="container hero-container">
+        <div class="hero-tag">
+          <span class="status-indicator"></span>
+          <span>College IT Educational Presentation &amp; Report</span>
+        </div>
+
+        <h1 class="hero-headline">
+          EMERGING <span class="gradient-text">TECHNOLOGIES</span>
+        </h1>
+        <p class="hero-subheadline">
+          Discover How Technology Is Changing Our World
+        </p>
+
+        <p class="hero-description">
+          Explore the innovations behind artificial intelligence, robotics, connected devices, virtual reality, and more. 
+          Learn where they came from, how they work step by step, and how they affect our everyday lives in plain, friendly English.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#topics" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> EXPLORE TOPICS
+          </a>
+          <a href="#quiz-section" class="btn btn-secondary">
+            <i class="fas fa-trophy"></i> TAKE 15-Q QUIZ
+          </a>
+          <button id="random-topic-btn" class="btn btn-glass">
+            <i class="fas fa-random"></i> SURPRISE TOPIC
+          </button>
+        </div>
+
+        <!-- TELEMETRY / STATS BAR -->
+        <div class="telemetry-bar glass-card">
+          <div class="telemetry-item">
+            <span class="telemetry-num" id="stat-topics">15</span>
+            <span class="telemetry-label">Comprehensive Topics</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-num">45+</span>
+            <span class="telemetry-label">Real-Life Scenarios</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-num">15</span>
+            <span class="telemetry-label">Process Flow Diagrams</span>
+          </div>
+          <div class="telemetry-divider"></div>
+          <div class="telemetry-item">
+            <span class="telemetry-num">100%</span>
+            <span class="telemetry-label">Plain-English Explanations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW / WHAT ARE EMERGING TECHNOLOGIES -->
+    <section id="overview" class="content-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-seedling"></i> FOUNDATION CONCEPT</div>
+          <h2 class="section-heading">Understanding Emerging Technologies &amp; IT Trends</h2>
+          <p class="section-subtext">Before diving into individual tools, let us understand what makes a technology "emerging" and why it matters to students and society.</p>
+        </div>
+
+        <div class="overview-grid">
+          <div class="overview-card glass-card">
+            <div class="overview-icon-badge blue"><i class="fas fa-question"></i></div>
+            <h3>What Is an Emerging Technology?</h3>
+            <p>An <strong>emerging technology</strong> is a radical innovation currently in development or rapidly growing in practical adoption. It has the power to dramatically reshape industries, create new careers, and solve challenges that older systems cannot touch.</p>
+            <div class="mini-contrast">
+              <span class="tag established">Established: Smartphones, 4G, Laptops</span>
+              <span class="tag emerging">Emerging: GenAI, Quantum, Brain-Computer Interfaces</span>
+            </div>
+          </div>
+
+          <div class="overview-card glass-card">
+            <div class="overview-icon-badge purple"><i class="fas fa-sync-alt"></i></div>
+            <h3>What Is Digital Transformation?</h3>
+            <p><strong>Digital transformation</strong> is how schools, hospitals, and companies integrate modern digital tools into every area of their operation — changing how work gets done and delivering greater value to people.</p>
+            <p class="example-quote"><em>"Example: A college replacing paper registration with an instant online student portal and automated advisory system."</em></p>
+          </div>
+
+          <div class="overview-card glass-card">
+            <div class="overview-icon-badge cyan"><i class="fas fa-chart-line"></i></div>
+            <h3>How Innovations Move to Mainstream</h3>
+            <p>Technologies travel through a journey: <strong>Lab Research &rarr; Prototype &rarr; Early Adopters &rarr; Mass Adoption &rarr; Everyday Standard</strong>. Understanding this curve helps you prepare for the jobs and skills of tomorrow.</p>
+            <div class="stat-highlight">
+              <span class="stat-bold">85%</span> of jobs that today's students will fill in 2035 will involve tools that are still emerging today.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 TOPICS SECTION -->
+    <section id="topics" class="content-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-book-open"></i> CHAPTER 10 CURRICULUM</div>
+          <h2 class="section-heading">All 15 Emerging Technology Topics</h2>
+          <p class="section-subtext">Click any topic card to open its complete educational dossier: clear definition, history, step-by-step diagram, pros/cons, 3 realistic scenarios, and key takeaway.</p>
+        </div>
+
+        <!-- TOPIC FILTER BUTTONS -->
+        <div class="filter-bar" id="topic-filter-bar">
+          <button class="filter-pill active" data-category="all">All 15 Topics</button>
+          <button class="filter-pill" data-category="ai">AI &amp; Data</button>
+          <button class="filter-pill" data-category="hardware">Hardware &amp; IoT</button>
+          <button class="filter-pill" data-category="xr">XR (VR/AR)</button>
+          <button class="filter-pill" data-category="web3">Blockchain</button>
+          <button class="filter-pill" data-category="strategy">Industry &amp; Society</button>
+        </div>
+
+        <!-- SEARCH STATUS / EMPTY STATE -->
+        <div id="search-status" class="search-status-bar" style="display: none;"></div>
+
+        <!-- DYNAMIC TOPICS GRID -->
+        <div class="topics-grid" id="topics-grid">
+          <!-- Injected via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRY APPLICATION MATRIX -->
+    <section id="matrix" class="content-section matrix-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-industry"></i> TOPIC 13 SPOTLIGHT</div>
+          <h2 class="section-heading">Cross-Industry Application Matrix</h2>
+          <p class="section-subtext">See how emerging technologies are actively modernizing 8 key sectors of human society.</p>
+        </div>
+
+        <div class="matrix-grid" id="industry-matrix-grid">
+          <!-- Injected via script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DECISION-MAKING FRAMEWORK (TOPIC 14 & 15 SPOTLIGHT) -->
+    <section id="decision-framework" class="content-section framework-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-sitemap"></i> STRATEGIC IMPLEMENTATION</div>
+          <h2 class="section-heading">Choosing &amp; Governing Emerging Technologies</h2>
+          <p class="section-subtext">Topics 14 &amp; 15: How an organization chooses the right tech without wasting budget, and the broader societal implications.</p>
+        </div>
+
+        <div class="framework-dual-grid">
+          <!-- TOPIC 14 SHOWCASE -->
+          <div class="framework-card glass-card">
+            <div class="framework-header">
+              <span class="framework-num">TOPIC 14</span>
+              <h3>4-Step Framework for Choosing Tech</h3>
+              <p class="framework-desc">Never adopt technology just because it's popular or shiny. Always match the tool to the genuine human problem.</p>
+            </div>
+
+            <div class="step-guide">
+              <div class="step-guide-item">
+                <span class="step-circle">1</span>
+                <div>
+                  <strong>Identify the Real Problem First:</strong>
+                  <p>Don't buy AI just to have AI. Ask: "Is the problem slow grading? Lost records? Low student engagement?"</p>
+                </div>
+              </div>
+              <div class="step-guide-item">
+                <span class="step-circle">2</span>
+                <div>
+                  <strong>Evaluate Total Readiness &amp; Budget:</strong>
+                  <p>Can the school afford maintenance, high-speed Wi-Fi, and software licenses year after year?</p>
+                </div>
+              </div>
+              <div class="step-guide-item">
+                <span class="step-circle">3</span>
+                <div>
+                  <strong>Train the People (Human Centricity):</strong>
+                  <p>A high-tech smart board is useless if teachers never receive friendly, stress-free training on how to use it.</p>
+                </div>
+              </div>
+              <div class="step-guide-item">
+                <span class="step-circle">4</span>
+                <div>
+                  <strong>Pilot Test &amp; Measure Outcomes:</strong>
+                  <p>Roll out to 2 classrooms first. Measure if grades or enthusiasm improved before spending on the whole campus.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="school-case-study">
+              <div class="case-header"><i class="fas fa-school"></i> Real College Scenario: St. Jude Tech Academy</div>
+              <p>Faced with high dropout rates in first-year programming, the school considered buying 100 expensive VR headsets ($50,000). Applying this framework, they realized VR wasn't the issue — students needed immediate 24/7 homework feedback. They chose an affordable AI coding tutor ($3,000) instead. Result: Homework completion rose by 42% at a fraction of the cost.</p>
+            </div>
+          </div>
+
+          <!-- TOPIC 15 SHOWCASE -->
+          <div class="framework-card glass-card">
+            <div class="framework-header">
+              <span class="framework-num">TOPIC 15</span>
+              <h3>Future Implications for IT &amp; Society</h3>
+              <p class="framework-desc">Balancing boundless innovation with ethics, privacy, human dignity, and sustainable employment.</p>
+            </div>
+
+            <div class="implications-list">
+              <div class="implication-box">
+                <div class="imp-icon"><i class="fas fa-briefcase"></i></div>
+                <div>
+                  <strong>The Future of Jobs &amp; Careers</strong>
+                  <p>Repetitive routine tasks are automated, while roles emphasizing creative problem solving, empathy, systems design, and AI orchestration become highly valued.</p>
+                </div>
+              </div>
+
+              <div class="implication-box">
+                <div class="imp-icon"><i class="fas fa-user-shield"></i></div>
+                <div>
+                  <strong>Privacy &amp; Data Sovereignty</strong>
+                  <p>As IoT sensors and facial recognition expand, strict legal guardrails (like GDPR and Philippine Data Privacy Act) are vital to ensure human dignity.</p>
+                </div>
+              </div>
+
+              <div class="implication-box">
+                <div class="imp-icon"><i class="fas fa-balance-scale"></i></div>
+                <div>
+                  <strong>The Digital Divide &amp; Equity</strong>
+                  <p>If advanced AI and satellite internet are only available in wealthy urban areas, rural students fall behind. Responsible technology must be inclusive and accessible.</p>
+                </div>
+              </div>
+
+              <div class="implication-box">
+                <div class="imp-icon"><i class="fas fa-leaf"></i></div>
+                <div>
+                  <strong>Green Computing &amp; Energy Needs</strong>
+                  <p>Data centers training large AI models and validating blockchains consume gigawatts of electricity. The future demands carbon-neutral server infrastructure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 15-QUESTION KNOWLEDGE QUIZ -->
+    <section id="quiz-section" class="content-section quiz-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-award"></i> KNOWLEDGE VERIFICATION</div>
+          <h2 class="section-heading">Interactive 15-Question Quiz</h2>
+          <p class="section-subtext">Test your mastery of Chapter 10. Every question is based on the 15 topics and includes detailed explanations for each answer.</p>
+        </div>
+
+        <div class="quiz-card glass-card">
+          <!-- QUIZ HUD / PROGRESS -->
+          <div class="quiz-hud">
+            <div class="quiz-progress-wrap">
+              <div class="quiz-progress-labels">
+                <span id="quiz-question-counter">Question 1 of 15</span>
+                <span id="quiz-score-live">Score: 0 / 15</span>
+              </div>
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-bar" id="quiz-progress-bar" style="width: 6.66%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTIVE QUESTION CONTAINER -->
+          <div id="quiz-question-container" class="quiz-question-box">
+            <!-- Rendered dynamically -->
+          </div>
+
+          <!-- QUIZ CONTROLS -->
+          <div class="quiz-action-bar">
+            <button id="quiz-prev-btn" class="btn btn-secondary" disabled>
+              <i class="fas fa-arrow-left"></i> Previous
+            </button>
+            <button id="quiz-next-btn" class="btn btn-primary" style="display: none;">
+              Next Question <i class="fas fa-arrow-right"></i>
+            </button>
+            <button id="quiz-finish-btn" class="btn btn-primary" style="display: none;">
+              See Final Score <i class="fas fa-check-circle"></i>
+            </button>
+            <button id="quiz-restart-btn" class="btn btn-glass" style="display: none;">
+              <i class="fas fa-redo"></i> Retake Quiz
+            </button>
+          </div>
+
+          <!-- QUIZ RESULT SCREEN (Initially Hidden) -->
+          <div id="quiz-result-view" class="quiz-results" style="display: none;">
+            <!-- Rendered on completion -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES & SOURCES SECTION -->
+    <section id="references" class="content-section references-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <div class="section-badge"><i class="fas fa-check-double"></i> VERIFIED CITATIONS</div>
+          <h2 class="section-heading">References &amp; Academic Sources</h2>
+          <p class="section-subtext">All facts, historical timelines, and architectural diagrams in this report are backed by verified publications from leading global institutions.</p>
+        </div>
+
+        <div class="references-grid" id="references-grid">
+          <!-- Injected via script.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- EXPANDABLE DOSSIER MODAL FOR ANY OF THE 15 TOPICS -->
+  <div id="topic-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-shell glass-card">
+      <!-- MODAL HEADER -->
+      <div class="modal-head">
+        <div class="modal-icon-badge" id="modal-icon">🤖</div>
+        <div class="modal-title-wrap">
+          <span class="modal-topic-number" id="modal-number">TOPIC 01</span>
+          <h2 class="modal-main-title" id="modal-title">Artificial Intelligence</h2>
+          <p class="modal-tagline" id="modal-tagline">Systems that think, learn, and reason</p>
+        </div>
+        <button id="modal-close-btn" class="modal-close-btn" title="Close dossier (Esc)">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- DOSSIER JUMP TABS -->
+      <div class="modal-tabs-scroller">
+        <div class="modal-tabs" id="modal-tabs">
+          <button class="dossier-tab active" data-pane="pane-what"><i class="fas fa-question-circle"></i> A. What Is It?</button>
+          <button class="dossier-tab" data-pane="pane-origin"><i class="fas fa-history"></i> B. History &amp; Origin</button>
+          <button class="dossier-tab" data-pane="pane-how"><i class="fas fa-cogs"></i> C. How It Works</button>
+          <button class="dossier-tab" data-pane="pane-pros"><i class="fas fa-thumbs-up"></i> D. Advantages</button>
+          <button class="dossier-tab" data-pane="pane-cons"><i class="fas fa-thumbs-down"></i> E. Disadvantages</button>
+          <button class="dossier-tab" data-pane="pane-scenarios"><i class="fas fa-users"></i> F. Real Scenarios</button>
+          <button class="dossier-tab" data-pane="pane-importance"><i class="fas fa-star"></i> G. Why It Matters</button>
+          <button class="dossier-tab" data-pane="pane-takeaway"><i class="fas fa-lightbulb"></i> H. Key Takeaway</button>
+        </div>
+      </div>
+
+      <!-- MODAL CONTENT BODY -->
+      <div class="modal-body" id="modal-body-container">
+        <div id="pane-what" class="dossier-pane active"></div>
+        <div id="pane-origin" class="dossier-pane"></div>
+        <div id="pane-how" class="dossier-pane"></div>
+        <div id="pane-pros" class="dossier-pane"></div>
+        <div id="pane-cons" class="dossier-pane"></div>
+        <div id="pane-scenarios" class="dossier-pane"></div>
+        <div id="pane-importance" class="dossier-pane"></div>
+        <div id="pane-takeaway" class="dossier-pane"></div>
+      </div>
+
+      <!-- MODAL FOOTER NAVIGATION -->
+      <div class="modal-footer-nav">
+        <button id="modal-prev-topic" class="btn btn-secondary">
+          <i class="fas fa-chevron-left"></i> Previous Topic
+        </button>
+        <span class="modal-footer-counter" id="modal-footer-counter">Topic 1 of 15</span>
+        <button id="modal-next-topic" class="btn btn-secondary">
+          Next Topic <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="brand-pulse"><i class="fas fa-atom"></i></span>
+          <span class="brand-title">EMERGING<span class="brand-highlight">TECH</span></span>
+        </div>
+        <p class="footer-summary">
+          College Educational Presentation &amp; Report for <strong>Chapter 10: Emerging Technologies</strong>. 
+          Created to make cutting-edge innovation accessible, engaging, and clear for every student.
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-meta-pill"><i class="fas fa-code"></i> HTML5 / Modern CSS / Vanilla JS</div>
+        <div class="footer-meta-pill"><i class="fas fa-shield-alt"></i> Zero Dependencies / Runs Fully Offline</div>
+        <p class="copyright">&copy; 2026 Information Technology Department. Educational use permitted.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CELEBRATION CONFETTI CANVAS -->
+  <canvas id="confetti-canvas" class="confetti-canvas-layer"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
